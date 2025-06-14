@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        #displayDiv {
+            border: 1px solid black;
+            padding: 20px;
+            background-color: lightblue;
+            min-height: 50px;
+            text-align: left;
+            word-wrap: break-word;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Real-Time text display</h1>
+
+    <p>Type something in the box below:</p>
+
+    <input type="text" id="textInput" placeholder="Start typing here...">
+
+    <div id="displayDiv"></div>
+
+    <script>
+
+        const textInput = document.getElementById('textInput');
+        const displayDiv = document.getElementById('displayDiv');
+
+        textInput.addEventListener('input', () => {
+            displayDiv.textContent = textInput.value;
+        });
+    </script>
+</body>
+
+</html>

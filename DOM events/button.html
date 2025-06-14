@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Paragraph</title>
+</head>
+<body>
+
+  <h1>WHAT IS JAVABEAN?</h1>
+
+  <button id="button">Show Answer</button>
+
+  <p id="myParagraph" style="display: none;">
+    A JavaBean is a special type of POJO class that follows some specific rules and conventions defined by Java.
+  </p>
+
+  <script>
+    const button = document.getElementById('button');
+    const myParagraph = document.getElementById('myParagraph');
+
+    button.addEventListener('click', () => {
+      if (myParagraph.style.display === 'none') {
+        myParagraph.style.display = 'block';
+        button.textContent = 'Hide Answer';
+      } else {
+        myParagraph.style.display = 'none';
+        button.textContent = 'Show Answer';
+      }
+    });
+  </script>
+
+</body>
+</html>
