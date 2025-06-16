@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Background color</title>
+    <script>
+        let colorArray = ["lightblue", "green", "lavender", "pink", "orange", "peachpuff"];
+        
+        function changeBackgroundColor() {
+            const randomIndex = Math.floor(Math.random() * colorArray.length);
+            const selectedColor = colorArray[randomIndex]; 
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script>
+</head>
+<body onload="changeBackgroundColor()">
+    <h1>Refresh the page to change the background color!</h1>
+</body>
+</html>
